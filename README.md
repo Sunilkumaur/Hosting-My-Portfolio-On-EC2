@@ -10,6 +10,9 @@ What we acheived
   1. We made the GitHub to access the EC2 instance to update the source code of the Resume/Portfolio in the server whenever a changes/Deployment happening in the GitHub.
   2. the YAML file will take the responsiblity to deploy the new changes in the Git to the EC2 by running a simple SSH commands on it
   
+![Screenshot 2024-11-29 225119](https://github.com/user-attachments/assets/cea17b4d-e954-4163-869f-e80e9c724f94)
+![Screenshot 2024-11-29 225206](https://github.com/user-attachments/assets/411fd8b5-c164-43ae-a309-cfa44df7d837)
+
 
 <!--
 **Sunilkumaur/sunilkumaur** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
