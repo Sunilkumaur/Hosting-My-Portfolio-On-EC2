@@ -1,13 +1,20 @@
-Hosting a Resume/Portfolio in EC2 instance with CI/CD setup using GitHub
-Followed the below steps to achieve this,
-  1.	Created a EC2 instance in AWS Console with Ubuntu OS and Security group allowing Port 80, Port 443 from anywhere in internet
-  2.	Alongside created a Keypair for the EC2 to make it accessible to the GitHub deployment/changes
-  3.	Stored the secrets in the GitHub from the EC2
-  4.	Created a YAML file for the CD/CI setup and so whenever a deployment/change happens it triggers the changes to be get published in the EC2 lying source code of the Resume/Portfolio
+Hosting My Portfolio in AWS EC2 instance with CI/CD setup using GitHub
 
-What we achieved
-  1.	We made the GitHub to access the EC2 instance to update the source code of the Resume/Portfolio in the server whenever a changes/Deployment happening in the GitHub.
-  2.	the YAML file will take the responsibility to deploy the new changes in the Git to the EC2 by running a simple SSH commands on it
+I hosted my resume and portfolio on an EC2 instance with a CI/CD setup using GitHub. 
+To start, I created an EC2 instance on AWS running Ubuntu and configured the security group to allow HTTP (port 80) and HTTPS (port 443) access from anywhere, 
+ensuring my portfolio is publicly accessible.
+          
+I then generated an SSH keypair, which allowed secure communication between GitHub and 
+the EC2 instance for automated deployments whenever there were updates to the repository. To keep things secure, I stored sensitive data, 
+like the SSH private key, in GitHub secrets, ensuring that no credentials were exposed.
+
+Next, I set up a YAML file in the .github/workflows directory to automate the deployment process. 
+This configuration allows changes pushed to the main branch of the GitHub repository to trigger a deployment to the EC2 instance. 
+When a new change is detected in the repository, the YAML workflow automatically connects to the EC2 instance via SSH, updates the portfolio's source code, 
+and reflects the changes on the live website.
+          
+This setup ensures that my portfolio remains up to date without the need for manual intervention, 
+and it demonstrates my ability to use cloud infrastructure and automation effectively.
 
 ![project1](https://github.com/user-attachments/assets/fdd374c0-d9a7-468e-be5b-b9d91977ccf1)
 ![Screenshot 2024-11-29 225119](https://github.com/user-attachments/assets/cea17b4d-e954-4163-869f-e80e9c724f94)
